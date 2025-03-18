@@ -1,2 +1,2 @@
-com\kama\ConsumerTestConfig.class
-com\kama\ConsumerApplication.class
+com\kama\consumer\ConsumerTest.class
+com\kama\consumer\ConsumerTestConfig.class

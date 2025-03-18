@@ -46,6 +46,11 @@ public class ClientProxy implements InvocationHandler {
         RpcResponse response= rpcClient.sendRequest(request);
         return response.getData();
     }
+
+    /**
+     * 生成代理对象，该代理对象每次调用方法都会经过上面的invoke方法增强
+     * @param clazz：被代理的接口
+     */
      public <T>T getProxy(Class<T> clazz){
         Object o = Proxy.newProxyInstance(clazz.getClassLoader(), new Class[]{clazz}, this);
         return (T)o;

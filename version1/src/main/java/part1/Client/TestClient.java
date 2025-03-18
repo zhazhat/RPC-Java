@@ -13,7 +13,7 @@ import part1.common.pojo.User;
 public class TestClient {
     public static void main(String[] args) {
         ClientProxy clientProxy=new ClientProxy("127.0.0.1",9999);
-        UserService proxy=clientProxy.getProxy(UserService.class);
+        UserService proxy=clientProxy.getProxy(UserService.class);  // 生成代理对象去执行用户请求
 
         User user = proxy.getUserByUserId(1);
         System.out.println("从服务端得到的user="+user.toString());

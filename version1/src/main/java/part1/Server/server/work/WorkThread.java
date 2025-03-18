@@ -38,6 +38,10 @@ public class WorkThread implements Runnable{
             e.printStackTrace();
         }
     }
+
+    /**
+     * 解析服务请求信息并通过反射调用对应服务方法得到相应
+     */
     private RpcResponse getResponse(RpcRequest rpcRequest){
         //得到服务名
         String interfaceName=rpcRequest.getInterfaceName();
